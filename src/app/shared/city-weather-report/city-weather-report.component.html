@@ -1,0 +1,15 @@
+<div *ngIf="cityWeatherReport" class="weather-report-container">
+  <mat-card class="weather-card">
+    <mat-card-header>
+      <mat-card-title class="city-name">{{activeCity.name}}</mat-card-title>
+      <mat-card-title class="current-temperature">{{cityWeatherReport.main.temp | toFahrenheit}} F</mat-card-title>
+      <mat-card-subtitle>{{cityWeatherReport.weather[0].main}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="custom-card-content">
+      <p><strong>Feels like: </strong>{{ cityWeatherReport.main.feels_like | toFahrenheit}} F</p>
+      <p><strong>Humidity: </strong>{{ cityWeatherReport.main.humidity }} %</p>
+      <p><strong>Max. Temperature: </strong>{{ cityWeatherReport.main.temp_max | toFahrenheit}} F</p>
+      <p><strong>Min. Temperature: </strong>{{ cityWeatherReport.main.temp_min | toFahrenheit}} F</p>
+    </mat-card-content>
+  </mat-card>
+</div>

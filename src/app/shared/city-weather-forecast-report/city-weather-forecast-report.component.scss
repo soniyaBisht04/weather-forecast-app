@@ -1,0 +1,18 @@
+@use "../../../styles";
+.city-weather-forecast-report {
+  .mat-tab-label {
+    width: 16.6%;
+  }
+
+  .forecast-data-card {
+    width: 100%;
+    margin: 10px;
+    @include styles.layout-media(gt-xs) {
+      width: 40%;
+    }
+    @include styles.layout-media(gt-sm) {
+      width: 20%;
+    }
+  }
+}
+

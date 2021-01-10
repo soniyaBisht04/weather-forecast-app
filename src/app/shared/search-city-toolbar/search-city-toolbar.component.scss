@@ -1,0 +1,24 @@
+@use "../../../styles";
+.search-city-toolbar-container {
+  display: flex;
+  flex-direction: column;
+  @include styles.layout-media(gt-xs) {
+    flex-direction: row;
+  }
+  h1 {
+    flex: 1;
+    align-self: center;
+    margin: 1% 0;
+    font-weight: 500;
+    @include styles.layout-media(gt-xs) {
+      margin: 0 0 0 1%;
+    }
+  }
+  .search-box {
+    justify-content: right;
+    text-align: center;
+    @include styles.layout-media(gt-xs) {
+      padding-right: 2%;
+    }
+  }
+}

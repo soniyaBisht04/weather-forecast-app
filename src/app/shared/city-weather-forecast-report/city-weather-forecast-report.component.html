@@ -1,0 +1,22 @@
+<div class="city-weather-forecast-report">
+  <mat-tab-group mat-align-tabs="start">
+    <template *ngFor="let forecast of forecastListByDate">
+      <mat-tab label="{{forecast.date}}">
+        <ng-container *ngFor="let temp of forecast.value" style="margin-top: 5px;">
+          <mat-card class="forecast-data-card">
+            <mat-card-header>
+              <mat-card-title><strong> {{temp.dt_txt | date: 'h:mm a'}}</strong></mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p><strong> Feels like:</strong> {{ temp.main.feels_like | toFahrenheit}} F</p>
+              <p><strong> Humidity:</strong> {{ temp.main.humidity}} %</p>
+              <p><strong> Max. Temperature:</strong> {{ temp.main.temp_max | toFahrenheit}} F</p>
+              <span><strong>Min. Temperature:</strong> {{ temp.main.temp_min | toFahrenheit}} F</span>
+            </mat-card-content>
+          </mat-card>
+        </ng-container>
+      </mat-tab>
+    </template>
+  </mat-tab-group>
+
+</div>

@@ -1,0 +1,15 @@
+<section class="search-city-toolbar-container">
+  <h1>Weather Forecast App</h1>
+  <div class="search-box">
+    <mat-form-field class="example-full-width">
+      <input type="text" placeholder="Search with city/country"
+             matInput [formControl]="searchControl" [matAutocomplete]="autoCityCountry">
+      <mat-autocomplete #autoCityCountry="matAutocomplete" [displayWith]="displayFn"
+                        (optionSelected)="changeActiveCity($event.option.value)">
+        <mat-option *ngFor="let option of cityCountryFilteredOptions | async" [value]="option">
+          {{option.name}}, {{option.country}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+.weather-report-container {
+  background-color: #ed804c73;
+  display: flex;
+  justify-content: center;
+
+  .weather-card {
+    background-color: transparent;
+    box-shadow: none;
+
+    mat-card-header {
+      text-align: center;
+
+      mat-card-title, mat-card-subtitle {
+        color: #ed1308;
+      }
+
+      .city-name {
+        font-size: 2em;
+        margin-bottom: 35px;
+      }
+
+      .current-temperature {
+        font-size: 5em;
+        margin-bottom: 30px;
+      }
+
+    }
+  }
+}
